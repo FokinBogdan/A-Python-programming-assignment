@@ -1,7 +1,6 @@
 from PIL import Image
 import numpy as np
 
-
 def get_average(arr):
     return int(np.sum(arr) / 3 // (mosaic_size ** 2))
 
