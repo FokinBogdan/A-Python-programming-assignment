@@ -3,7 +3,7 @@
 
 Изображение до: ![ball.jpg](ball.jpg)
 
-Изображение после работы filter.py : ![new ball.jpg](new ball.jpg)
+Изображение после работы filter.py : ![new_ball.jpg](new_ball.jpg)
 
 Изображение после работы old_filter.py: ![res.jpg](res.jpg)
 
