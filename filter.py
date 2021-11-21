@@ -38,14 +38,14 @@ def draw_mosaic_pixel(color):
 
 print(doctest.testmod())
 
-print('Введите название загружаемого изображения:')
+print('Введите название загружаемого изображения: ')
 input_image_name = input()
 
 img = Image.open(input_image_name)
 img_array = np.array(img)
 width, height = img.size
 
-print('Введите размер мозаики:')
+print('Введите размер мозаики: ')
 mosaic_size = int(input())
 print('Введите шаг серого:')
 graduation = int(input())
@@ -61,7 +61,7 @@ for i in range(0, height, mosaic_size):
         average = get_average(img_array[i:i + mosaic_size, j:j + mosaic_size], mosaic_size)
         draw_mosaic_pixel(int(average // graduation) * graduation)
 
-print('Введите название выгружаемого изображения:')
+print('Введите название выгружаемого изображения: ')
 output_image_name = input()
 
 res = Image.fromarray(img_array)

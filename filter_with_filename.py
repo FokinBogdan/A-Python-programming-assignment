@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+
 def get_average(arr):
     return int(np.sum(arr) / 3 // (mosaic_size ** 2))
 
@@ -23,12 +24,11 @@ mosaic_size = 10
 print('Введите шаг серого:')
 graduation = 50
 
-#растягиваю или сжимаю изображение, чтобы оно соответсвовало целому числу пикселей мозайки
+# растягиваю или сжимаю изображение, чтобы оно соответсвовало целому числу пикселей мозайки
 if width % mosaic_size != 0 or height % mosaic_size != 0:
     width = round(width / mosaic_size) * mosaic_size
     height = round(height / mosaic_size) * mosaic_size
     img_array = np.array(img.resize((width, height)))
-
 
 for i in range(0, height, mosaic_size):
     for j in range(0, width, mosaic_size):
